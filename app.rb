@@ -1,9 +1,10 @@
 require 'sinatra'
 require 'sinatra/reloader'
-@num_bottles = 99
-@message = 'Take one down'
 
 get '/' do
+  @num_bottles = 99
+  @message = 'Take one down'
+  @next_bottles = '98'
   erb :index
 end
 
