@@ -13,8 +13,9 @@ get '/bottles/:num_bottles' do
   @num_bottles = params[:num_bottles].to_s
   @message = 'Take one down'
   if @next_bottles == -1
+    @next_bottles = '99'
     @num_bottles = 'No '
-    @message = ''
+    @message = 'Start over?'
   end
   erb :index
 
