@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>99 Bottles</title>
+</head>
+<body>
+  <% if @bottles == 0 %>
+    <p>No bottles of beer on the wall</p>
+    <a href= '/'>`` Restart </a>
+    <% else %>
+      <%= @bottles %> bottles of beer on the wall
+      <a href='/bottles/<%= @bottles - 1 %>'> Take one down</a>
+      <% end %>
+</body>
+</html>
